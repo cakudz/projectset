@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="engine\windows\windows.cpp">
+      <Filter>engine\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\events\wndproc\wndproc.cpp">
+      <Filter>engine\events\wndproc</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\errors\errors.cpp">
+      <Filter>engine\errors</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="engine">
+      <UniqueIdentifier>{29646e14-fad7-4b88-bd23-180ca3623627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\rendering">
+      <UniqueIdentifier>{0a748a64-4ac2-430e-90de-65aa7b63e8c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\rendering\direct2d">
+      <UniqueIdentifier>{766c05f8-4d48-48a9-ac70-0267248c1e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\windows">
+      <UniqueIdentifier>{00acfcd8-2b51-429b-ab14-b225b1158ceb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\events">
+      <UniqueIdentifier>{df451e6b-0289-488f-8f25-6fb23b391a5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\events\wndproc">
+      <UniqueIdentifier>{bf0026ff-85b6-4524-8871-b2b8afa65846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\errors">
+      <UniqueIdentifier>{da673880-c636-4196-b8ae-542c80c5e9f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="engine\rendering\direct2d\direct2d.h">
+      <Filter>engine\rendering\direct2d</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\windows\windows.h">
+      <Filter>engine\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\events\wndproc\wndproc.h">
+      <Filter>engine\events\wndproc</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\errors\errors.h">
+      <Filter>engine\errors</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
