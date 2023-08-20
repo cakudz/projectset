@@ -11,6 +11,9 @@
     <ClCompile Include="engine\errors\errors.cpp">
       <Filter>engine\errors</Filter>
     </ClCompile>
+    <ClCompile Include="engine\rendering\direct2d\direct2d.cpp">
+      <Filter>engine\rendering\direct2d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">

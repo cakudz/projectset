@@ -2,6 +2,7 @@
 
 #include "engine/windows/windows.h"
 #include "engine/errors/errors.h"
+#include "engine/rendering/direct2d/direct2d.h"
 
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, LPSTR cmd_line, int cmd_show) {
 
@@ -17,6 +18,11 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, LPSTR cmd_line, 
 		return -1;
 	}
 
+	// now let our renderer set up
+	if ( !rendering::g_renderer.allocate_const_resources( ) || !rendering::g_renderer.allocate_resources( ) ) {
+		error.notify( "failed to initialise renderer" );
+		return -1;
+	}
 
 	MSG msg{};
 	BOOL avail{FALSE};
@@ -30,7 +36,13 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE prev_instance, LPSTR cmd_line, 
 
 
 		/* now it is frame time */
+		rendering::g_renderer.run_frame( );
+
 	}
+
+	// release system memory
+	rendering::g_renderer.release_resources( );
+	rendering::g_renderer.release_const_resources( );
 
 	return 0;
 

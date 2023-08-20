@@ -8,7 +8,7 @@ bool c_windows::create_fullscreen_canvas( ) {
 
 	WNDCLASS wc{};
 
-	wc.lpfnWndProc = wndproc::handler;
+	wc.lpfnWndProc = reinterpret_cast<WNDPROC>(wndproc::handler);
 	wc.hInstance = this->g_instance;
 	wc.lpszClassName = this->g_data.class_name;
 
