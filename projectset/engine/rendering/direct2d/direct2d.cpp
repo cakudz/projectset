@@ -91,19 +91,24 @@ namespace rendering {
         this->m_factory = nullptr;
     }
 
-    void c_rendering::resize( ) {
+    bool c_rendering::should_handle( event::type* e ) {
+
+        if ( e->m_category != event::resize_event )
+            return false;
+
+        auto event = reinterpret_cast<event::resize_t*>(e);
 
         // if we have a render target, it needs to be resized 
         // one sanity check because called from wndproc
         if ( this->m_render_target != nullptr ) {
-            RECT rc;
-            GetClientRect( windows.g_data.canvas_window, &rc );
 
-            D2D1_SIZE_U size = D2D1::SizeU( rc.right, rc.bottom );
+            D2D1_SIZE_U size = D2D1::SizeU( event->height, event->width );
 
             this->m_render_target->Resize( size );
             InvalidateRect( windows.g_data.canvas_window, NULL, FALSE );
         }
+
+        return false;
 
     }
 }

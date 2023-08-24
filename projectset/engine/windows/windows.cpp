@@ -15,7 +15,7 @@ bool c_windows::create_fullscreen_canvas( ) {
 	RegisterClass( &wc );
 
 	HWND wnd = CreateWindowEx( 0, this->g_data.class_name,
-		this->g_data.window_name, WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+		this->g_data.window_name, WS_POPUP, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
 		NULL, NULL, this->g_instance, nullptr );
 
 	if ( wnd == NULL || wnd == INVALID_HANDLE_VALUE )
@@ -23,7 +23,7 @@ bool c_windows::create_fullscreen_canvas( ) {
 
 	this->g_data.canvas_window = wnd;
 
-	ShowWindow( this->g_data.canvas_window, SHOW_FULLSCREEN );
+	ShowWindow( this->g_data.canvas_window, SW_MAXIMIZE );
 
 	return true;
 

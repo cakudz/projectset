@@ -4,10 +4,11 @@
 
 #include <d2d1.h>
 #include <Windows.h>
+#include "../../events/eventsystem/eventsystem.h"
 
 namespace rendering {
 
-	class c_rendering {
+	class c_rendering : event::handler {
 	private:
 
 		ID2D1Factory* m_factory;
@@ -32,7 +33,7 @@ namespace rendering {
 		void release_resources( );
 		void release_const_resources( );
 
-		void resize( );
+		bool should_handle( event::type* );
 
 		// called after dispatching messages - every frame
 		void run_frame( void );

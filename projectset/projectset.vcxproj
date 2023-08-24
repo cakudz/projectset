@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="engine\errors\errors.cpp" />
+    <ClCompile Include="engine\events\eventsystem\eventsystem.cpp" />
     <ClCompile Include="engine\events\wndproc\wndproc.cpp" />
     <ClCompile Include="engine\rendering\direct2d\direct2d.cpp" />
     <ClCompile Include="engine\windows\windows.cpp" />
@@ -136,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\errors\errors.h" />
+    <ClInclude Include="engine\events\eventsystem\eventsystem.h" />
     <ClInclude Include="engine\events\wndproc\wndproc.h" />
     <ClInclude Include="engine\rendering\direct2d\direct2d.h" />
     <ClInclude Include="engine\windows\windows.h" />
