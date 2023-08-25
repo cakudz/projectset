@@ -17,6 +17,18 @@
     <ClCompile Include="engine\events\eventsystem\eventsystem.cpp">
       <Filter>engine\events\eventsystem</Filter>
     </ClCompile>
+    <ClCompile Include="app\scene\scene.cpp">
+      <Filter>app\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="app\login\login.cpp">
+      <Filter>app\login</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\globals\globals.cpp">
+      <Filter>engine\globals</Filter>
+    </ClCompile>
+    <ClCompile Include="engine\rendering\rendering.cpp">
+      <Filter>engine\rendering</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">
@@ -43,6 +55,21 @@
     <Filter Include="engine\events\eventsystem">
       <UniqueIdentifier>{f258054b-220d-4f63-9a2d-4303864f8ed7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="app">
+      <UniqueIdentifier>{25e1ed83-ae01-4702-9458-e107679c4224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\scene">
+      <UniqueIdentifier>{1006e092-247d-4335-b9d4-3123dd5faa48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="app\login">
+      <UniqueIdentifier>{82eb11c2-1afa-4579-ae1f-de8123523f9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\globals">
+      <UniqueIdentifier>{1e199f49-2b07-4506-9575-1791edcdf057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\color">
+      <UniqueIdentifier>{b7593277-acf1-4d94-a530-bc5bad89cd1c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="engine\rendering\direct2d\direct2d.h">
@@ -59,6 +86,21 @@
     </ClInclude>
     <ClInclude Include="engine\events\eventsystem\eventsystem.h">
       <Filter>engine\events\eventsystem</Filter>
+    </ClInclude>
+    <ClInclude Include="app\scene\scene.h">
+      <Filter>app\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="app\login\login.h">
+      <Filter>app\login</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\globals\globals.h">
+      <Filter>engine\globals</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\color\color.h">
+      <Filter>engine\color</Filter>
+    </ClInclude>
+    <ClInclude Include="engine\rendering\renderer.h">
+      <Filter>engine\rendering</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

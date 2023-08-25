@@ -10,18 +10,31 @@ namespace event {
 		undefined_event = -1,
 		resize_event = 0,
 		keybd_event = 1,
-		mouse_event = 2
+		mouse_event = 2,
+		update_event = 3,
+		render_event = 4,
 	};
 
 	// in order to keep the inclusion simple, the math will be done on the outside of the type
-	struct type {
+	class type {
 	public:
 
 		category m_category{undefined_event};
 
-		type( category a = undefined_event ) { m_category = a; }
-
 	};
+
+	/* for ones that dont */
+	struct update_t : public type {
+	public:
+		update_t( ) { m_category = update_event; }
+	};
+
+	// for the actual drawing
+	struct render_t : public type {
+	public:
+		render_t( ) { m_category = render_event; }
+	};
+
 
 	/* for events that need info */
 	struct resize_t : public type {
@@ -29,7 +42,7 @@ namespace event {
 
 		unsigned int width = 0, height = 0;
 
-		resize_t( ) : type( resize_event ) {}
+		resize_t( ) { m_category = resize_event; }
 	};
 
 	struct keybd_t : public type {
@@ -38,7 +51,7 @@ namespace event {
 		unsigned int m_key{0};
 		bool m_pressed{false};
 
-		keybd_t( ) : type( keybd_event ) {}
+		keybd_t( ) { m_category = keybd_event; }
 	};
 
 	struct mouse_t : public type {
@@ -46,7 +59,7 @@ namespace event {
 
 		unsigned int x{0}, y{0};
 
-		mouse_t( ) : type( mouse_event ) {}
+		mouse_t( ) { m_category = mouse_event; }
 	};
 
 	// now comes the types of classes handling the dispatched events

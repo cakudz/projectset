@@ -128,18 +128,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="app\login\login.cpp" />
+    <ClCompile Include="app\scene\scene.cpp" />
     <ClCompile Include="engine\errors\errors.cpp" />
     <ClCompile Include="engine\events\eventsystem\eventsystem.cpp" />
     <ClCompile Include="engine\events\wndproc\wndproc.cpp" />
+    <ClCompile Include="engine\globals\globals.cpp" />
     <ClCompile Include="engine\rendering\direct2d\direct2d.cpp" />
+    <ClCompile Include="engine\rendering\rendering.cpp" />
     <ClCompile Include="engine\windows\windows.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="app\login\login.h" />
+    <ClInclude Include="app\scene\scene.h" />
+    <ClInclude Include="engine\color\color.h" />
     <ClInclude Include="engine\errors\errors.h" />
     <ClInclude Include="engine\events\eventsystem\eventsystem.h" />
     <ClInclude Include="engine\events\wndproc\wndproc.h" />
+    <ClInclude Include="engine\globals\globals.h" />
     <ClInclude Include="engine\rendering\direct2d\direct2d.h" />
+    <ClInclude Include="engine\rendering\renderer.h" />
     <ClInclude Include="engine\windows\windows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
